@@ -40,7 +40,6 @@ X = vectorizer.fit_transform(mensagens_limpas)
 modelo = MultinomialNB()
 modelo.fit(X, rotulos)
 
-print("--- TAREFA 1 ---")
 while True:
     nova_mensagem = input("\nDigite uma mensagem (ou 'sair' para encerrar): ")
     if nova_mensagem.lower() == "sair":
@@ -70,8 +69,8 @@ rotulos = [
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(frases)
 
-modelo2 = MulinomialNB()
-modelo2.fit(X2, rotulos)
+modelo = MultinomialNB()
+modelo.fit(X, rotulos)
 
 print("--- TAREFA 2 ---")
 while True:
@@ -103,7 +102,7 @@ print(f"Tempo de entrega previsto para o novo pedido: {tempo_previsto[0]:.2f} mi
 
 #TAREFA 4
 
-print("--- TAREFA 4 ---")
+print("\n--- TAREFA 4 ---")
 mensagens_cluster = [
     "Quero pedir pizza",
     "Qual o valor da pizza grande?",
@@ -125,4 +124,3 @@ kmeans.fit(X)
 
 for i, msg in enumerate(mensagens_cluster):
     print(f"'{msg}' => Cluster {kmeans.labels_[i]}")
-
