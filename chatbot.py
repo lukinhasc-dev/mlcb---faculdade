@@ -2,7 +2,7 @@ import re
 import sqlite3  # Opcional para persistência
 
 # Configurações
-SENHA_DONO = "dono123"  # Mude para algo seguro
+SENHA_DONO = "123"  # Mude para algo seguro
 ESTOQUE_INICIAL = [
     {"modelo": "Honda Civic", "ano": 2023, "preco": 120000, "disponivel": True},
     {"modelo": "Toyota Corolla", "ano": 2022, "preco": 110000, "disponivel": True},
